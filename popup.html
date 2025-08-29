@@ -1,14 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Custom PiP</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h3>Custom PiP</h3>
-  <button id="pipButton">Enter PiP</button>
-  <button id="skipBack">⏪ Back 10s</button>
-  <button id="skipForward">⏩ Forward 10s</button>
-  <script src="popup.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>PopNPlay</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>PopNPlay</h1>
+
+    <div class="row">
+      <button id="pipButton" title="Alt+P">PiP</button>
+    </div>
+
+    <div class="row">
+      <button id="skipBack" title="Alt+J">⏪ 10s</button>
+      <button id="skipForward" title="Alt+L">10s ⏩</button>
+    </div>
+
+    <p class="hint">
+      Shortcuts can be changed at
+      <a id="openShortcuts" href="#">chrome://extensions/shortcuts</a>.
+    </p>
+
+    <script src="popup.js"></script>
+  </body>
 </html>

@@ -1,16 +1,33 @@
 {
   "manifest_version": 3,
-  "name": "Custom PiP Controller",
-  "version": "1.0",
-  "description": "Adds more controls to Picture-in-Picture.",
+  "name": "PopNPlay PiP Controls",
+  "version": "1.0.0",
+  "action": { "default_popup": "popup.html" },
   "permissions": ["scripting", "activeTab"],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icons/icon48.png"
-  },
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+
+  "commands": {
+    "pip": {
+      "description": "Enter Picture-in-Picture",
+      "suggested_key": {
+        "default": "Alt+P",              // Windows/Linux/ChromeOS
+        "mac": "Command+Shift+P"         // macOS
+      }
+    },
+    "skip-back": {
+      "description": "Skip back 10s",
+      "suggested_key": {
+        "default": "Alt+J",
+        "mac": "Command+Shift+J"
+      }
+    },
+    "skip-forward": {
+      "description": "Skip forward 10s",
+      "suggested_key": {
+        "default": "Alt+L",
+        "mac": "Command+Shift+L"
+      }
+    }
   }
 }
