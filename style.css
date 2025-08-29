@@ -1,0 +1,10 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  width: 150px;
+}
+button {
+  display: block;
+  margin: 5px 0;
+  width: 100%;
+}
